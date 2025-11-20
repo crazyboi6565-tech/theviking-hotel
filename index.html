@@ -1,176 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Viking Hotel, Delhi - Your Gateway to Comfort</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        .header {
-            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .hero {
-            background: #f7fafc;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #2c5282;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #4a5568;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .features {
-            padding: 4rem 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .feature-card h3 {
-            color: #2c5282;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        .contact-section {
-            background: #2c5282;
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        .contact-item {
-            text-align: center;
-        }
-        .contact-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-        }
-        .contact-item p {
-            font-size: 1.1rem;
-        }
-        .footer {
-            background: #1a365d;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Viking Hotel, Delhi - Your Gateway to Comfort</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://via.placeholder.com/1200x600');
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background: #2c5282;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #1a365d;
+    }
+    section {
+      padding: 80px 0;
+    }
+    h2 {
+      text-align: center;
+      color: #2c5282;
+      margin-bottom: 40px;
+      font-size: 2em;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .feature-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature-card h3 {
+      color: #2c5282;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-item-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .contact-section {
+      background: #2c5282;
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.9;
+    }
+    .contact-item p {
+      font-size: 1.1rem;
+    }
+    .footer {
+      background: #1a365d;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      .hero-content h2 {
+        font-size: 1.8rem;
+      }
+      section {
+        padding: 40px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>🏨 The Viking Hotel</h1>
-            <p>Premium Accommodation in the Heart of Delhi</p>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to The Viking Hotel</h2>
-            <p>Experience exceptional hospitality and comfort at Delhi's finest hotel. Whether you're here for business or leisure, we offer the perfect blend of luxury and convenience.</p>
-        </div>
-    </section>
+<!-- HEADER -->
+<div class="header">
+  <h1>🏨 The Viking Hotel</h1>
+  <p>Premium Accommodation in the Heart of Delhi</p>
+</div>
 
-    <section class="container features">
-        <div class="feature-card">
-            <h3>🛏️ Comfortable Rooms</h3>
-            <p>Spacious, well-appointed rooms designed for your comfort with modern amenities and elegant decor.</p>
-        </div>
-        <div class="feature-card">
-            <h3>📍 Prime Location</h3>
-            <p>Strategically located in Delhi with easy access to major attractions, business districts, and transport hubs.</p>
-        </div>
-        <div class="feature-card">
-            <h3>🍽️ Dining Options</h3>
-            <p>Enjoy delicious meals and refreshments with our quality dining services.</p>
-        </div>
-        <div class="feature-card">
-            <h3>✨ Premium Service</h3>
-            <p>24/7 dedicated staff ready to make your stay memorable with personalized attention.</p>
-        </div>
-    </section>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h2>Modern Comfort, Prime Connectivity</h2>
+    <p>Experience luxury and convenience just minutes from Connaught Place and New Delhi Railway Station</p>
+    <a href="#contact" class="btn">Book Now</a>
+  </div>
+</section>
 
-    <section class="contact-section">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Ready to book your stay? Contact us today!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p>011 4902 7287 / +91 92205 18499</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📧 Email</h3>
-                    <p>thevikinghotel@yahoo.com / hotelvikingdelhi@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <h3>📍 Address</h3>
-                    <p>2355-57, Rajguru Road, Paharganj, Delhi, 110055</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- FEATURES/AMENITIES -->
+<section>
+  <div class="container">
+    <h2>Why Choose The Viking Hotel?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>🛏️ Comfortable Rooms</h3>
+        <p>Spacious, well-appointed rooms with modern amenities and elegant decor.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📍 Prime Location</h3>
+        <p>Strategically located with easy access to major attractions and transport hubs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🍽️ Dining Options</h3>
+        <p>Quality dining services with delicious meals and refreshments.</p>
+      </div>
+      <div class="feature-card">
+        <h3>✨ Premium Service</h3>
+        <p>24/7 dedicated staff ready to make your stay memorable.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 The Viking Hotel, Delhi. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Luxury+Suite" alt="Luxury Suite with Bathtub">
+        <div class="gallery-item-caption">Luxury Suite with Bathtub</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Reception+Area" alt="Modern Reception Area">
+        <div class="gallery-item-caption">Modern Reception Area</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Twin+Bed+Room" alt="Twin Bed Guest Room">
+        <div class="gallery-item-caption">Twin Bed Guest Room</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Hotel+Entrance" alt="Hotel Corridor and Entrance">
+        <div class="gallery-item-caption">Hotel Entrance</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Twin+Beds+Room" alt="Large Room with Twin Beds">
+        <div class="gallery-item-caption">Twin Beds Room</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Modern+Bathroom" alt="Modern Bathroom with Fixtures">
+        <div class="gallery-item-caption">Modern Bathroom</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Lobby+Lounge" alt="Lobby Lounge Area">
+        <div class="gallery-item-caption">Lobby Lounge</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Night+Entrance" alt="Hotel Entrance at Night">
+        <div class="gallery-item-caption">Hotel Entrance at Night</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Premium+Suite" alt="Premium Suite Room">
+        <div class="gallery-item-caption">Premium Suite</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300x280/2c5282/ffffff?text=Guest+Room+Amenities" alt="Guest Room with Modern Amenities">
+        <div class="gallery-item-caption">Guest Room Amenities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>Ready to book your stay? Contact us today!</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <h3>📞 Phone</h3>
+        <p>011 4902 7287 / +91 92205 18499</p>
+      </div>
+      <div class="contact-item">
+        <h3>📧 Email</h3>
+        <p>thevikinghotel@yahoo.com / hotelvikingdelhi@gmail.com</p>
+      </div>
+      <div class="contact-item">
+        <h3>📍 Address</h3>
+        <p>2355-57, Rajguru Road, Paharganj, Delhi, 110055</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 The Viking Hotel, Delhi. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
